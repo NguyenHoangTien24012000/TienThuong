@@ -31,12 +31,7 @@
           margin: 0;
 
           background: #000;
-          background-image: url(./tym.jpg) ;
-        
-          background-size: cover;
-          background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; 
+ 
 
         }
 
@@ -49,8 +44,90 @@
           height: 100%;
 
         }
+        :root {
+              --card_width: 250px;
+              --row_increment: 10px;
+              --card_border_radius: 16px;
+              --card_small: 26;
+              --card_medium: 33;
+              --card_large: 45;
+          }
+  
+          body {
+              margin: 0;
+              padding: 0;
+              padding-top: 5px;
+              background-color: grey;
+          }
+  
+          .pin_container {
+              margin: 0;
+              padding: 0;
+              width: 100vw;
+              height: 100vh;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              overflow: hidden;
+              display: grid;
+              grid-template-columns: repeat(auto-fill, var(--card_width));
+              grid-auto-rows: var(--row_increment);
+              justify-content: center;
+  
+              background-color: black;
+              background-image: url(./tym2.jpg) ;
+        
+        background-size: cover;
+        background-position: center; /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover; 
+          }
+  
+          .card {
+              padding: 0;
+              margin: 15px 10px;
+              border-radius: var(--card_border_radius);
+              background-color: red;
+                
+        background-size: cover;
+        background-position: center; /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover; 
+          }
+  
+          .card_small {
+              grid-row-end: span var(--card_small);
+          }
+  
+          .card_medium {
+              grid-row-end: span var(--card_medium);
+          }
+  
+          .card_large {
+              grid-row-end: span var(--card_large);
+          }
       </style>
 
+  
+      <div class="pin_container">
+          <div class="card card_small" style="background-image: url(./yeu1.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu3.jpg);"></div>
+          <div class="card card_large" style="background-image: url(./yeu4.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu5.jpg);"></div>
+          <div class="card card_small" style="background-image: url(./yeu6.jpg);"></div>
+          <div class="card card_large" style="background-image: url(./yeu7.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu8.jpg);"></div>
+          <div class="card card_small" style="background-image: url(./yeu9.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu10.jpg);"></div>
+          <div class="card card_small" style="background-image: url(./yeu11.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu12.jpg);"></div>
+          <div class="card card_large" style="background-image: url(./yeu13.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu14.jpg);"></div>
+          <div class="card card_small" style="background-image: url(./yeu15.jpg);"></div>
+          <div class="card card_medium" style="background-image: url(./yeu10.jpg);"></div>
+          <div class="card card_large"></div>
+      </div>
+ 
    <div style="text-align: center;position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-60%); font-family: Verdana, Geneva, Tahoma, sans-serif; color:#3983f2;">
     <h1>Hoàng Tiến</h1>
     <h1>Hoài Thương</h1>
